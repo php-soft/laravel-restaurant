@@ -21,8 +21,8 @@ class CreateTrackingsTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
             $table->date('work_day');
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->double('total_time');
             $table->timestamps();
         });

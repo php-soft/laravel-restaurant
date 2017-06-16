@@ -15,6 +15,8 @@ class DishOrderTable extends Migration
     {
         Schema::create('dish_orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('order_id');
+            $table->integer('dish_id');
             $table->integer('quantity');
             $table->float('price');
             $table->timestamps();
