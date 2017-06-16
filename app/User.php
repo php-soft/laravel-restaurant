@@ -52,6 +52,11 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function salary()
     {
         return $this->hasOne(Salary::class);
