@@ -9,13 +9,23 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    const ROLE_USER = 0;
+    const ROLE_ADMIN = 1;
+    const ROLE_EMPLOYEE = 2;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'phone',
+        'gender',
+        'address',
+        'role',
     ];
 
     /**
@@ -26,4 +36,29 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function trackings()
+    {
+        return $this->hasMany(Tracking::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function salary()
+    {
+        return $this->hasOne(Salary::class);
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = bcrypt($value);
+    }
 }
