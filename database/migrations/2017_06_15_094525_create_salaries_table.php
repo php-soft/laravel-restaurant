@@ -20,11 +20,11 @@ class CreateSalariesTable extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');;
-            $table->float('salary');
-            $table->float('allowance');
-            $table->float('tardiness_reduction');
-            $table->float('gross_pay');
-            $table->float('net_pay');
+            $table->decimal('salary');
+            $table->decimal('allowance');
+            $table->decimal('tardiness_reduction');
+            $table->decimal('gross_pay');
+            $table->decimal('net_pay');
             $table->float('tax');
             $table->timestamps();
         });
