@@ -12,7 +12,7 @@ class ReviewSeeder extends Seeder
     public function run()
     {
         DB::table('reviews')->insert([
-            ['user_id'=>4,
+            ['user_id'=>1,
             'rate'=>5,
             'content'=>"ngon",
            
