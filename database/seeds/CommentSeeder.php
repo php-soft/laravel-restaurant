@@ -12,7 +12,7 @@ class CommentSeeder extends Seeder
     public function run()
     {
         DB::table('comments')->insert([
-            ['user_id'=>4,
+            ['user_id'=>1,
             'review_id'=>1,
             'content'=>"ngon, hap dan, re...........",
            

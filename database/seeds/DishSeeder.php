@@ -12,7 +12,7 @@ class DishSeeder extends Seeder
     public function run()
     {
         DB::table('dishes')->insert([
-            ['category_id'=>9,
+            ['category_id'=>1,
             'name'=>"Bun Bo",
             'price'=>35000,
             'description'=>"",
@@ -20,7 +20,7 @@ class DishSeeder extends Seeder
             'image'=>"",
 
             ],
-            ['category_id'=>10,
+            ['category_id'=>2,
             'name'=>"My Quang Ga",
             'price'=>45000,
             'description'=>"",
@@ -28,7 +28,7 @@ class DishSeeder extends Seeder
             'image'=>"",
 
             ],
-            ['category_id'=>10,
+            ['category_id'=>2,
             'name'=>"My Quang Ech",
             'price'=>45000,
             'description'=>"",
@@ -36,7 +36,7 @@ class DishSeeder extends Seeder
             'image'=>"",
 
             ],
-            ['category_id'=>11,
+            ['category_id'=>3,
             'name'=>"Chao Bo Bam",
             'price'=>25000,
             'description'=>"",
@@ -44,7 +44,7 @@ class DishSeeder extends Seeder
             'image'=>"",
 
             ],
-            ['category_id'=>12,
+            ['category_id'=>4,
             'name'=>"Banh My Op La",
             'price'=>20000,
             'description'=>"",
