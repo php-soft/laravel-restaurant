@@ -13,7 +13,7 @@ class TrackingSeeder extends Seeder
     {
         DB::table('trackings')->insert([
             ['user_id'=>4,
-            'work_day'=>'06/06/17',
+            'work_day'=>'17/06/17',
             'start_time'=>'6:00:03',
             'end_time'=>'11:00:05',
             'total_time'=>'5',
